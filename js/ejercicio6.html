@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Cuenta{
+        nombre;
+        saldo = 0;
+        constructor(nombre){
+            this.nombre = nombre;
+        }
+        ingresar(cantidad){
+            this.saldo += cantidad;
+        }
+        retirar(cantidad){
+            if(cantidad > this.saldo){
+                console.log("No se puede retirar esa cantidad. Saldo insuficiente.");
+            } else {
+                this.saldo -= cantidad;
+            }
+        }
+    }
+</script>
+</html>

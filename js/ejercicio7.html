@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Vehiculo{
+        marca;
+        arrancar(){
+            console.log("El vehículo " + this.marca + " ha arrancado.");
+        }
+    }
+    class CocheElectrico extends Vehiculo{
+        autonomia = 400;
+        constructor(marca){
+            super();
+            this.marca = marca;
+        }
+        arrancar(){
+            if(this.autonomia <= 0){
+                console.log("No se puede arrancar el coche eléctrico " + this.marca + ". Batería descargada.");
+                return;
+            }else{
+                this.autonomia -= 50;
+                console.log("El coche eléctrico " + this.marca + " ha arrancado silenciosamente.");
+            }
+        }
+        cargar(){
+            if(this.autonomia >= 400){
+                console.log("El coche eléctrico " + this.marca + " ya está completamente cargado.");
+                return;
+            }else{
+                do{
+                    console.log("Cargando el coche eléctrico " + this.marca);
+                    this.autonomia += 50;
+                    console.log("Lleva " + this.autonomia + " km de autonomía.");
+                }while(this.autonomia < 400);
+                console.log("El coche eléctrico " + this.marca + " ha terminado de cargar.");
+            }
+        }
+    }
+</script>
+</html>
