@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Playlist{
+        canciones = [];
+        constructor(nombre){
+            this.nombre = nombre;
+        }
+        agregarCancion(titulo){
+            this.canciones.push(titulo);
+        }
+        reproducirTodo(){
+            console.log("Reproduciendo playlist: " + this.nombre);
+            this.canciones.forEach(cancion => {
+                console.log("Reproduciendo: " + cancion);
+            });
+        }
+    }
+</script>
+</html>

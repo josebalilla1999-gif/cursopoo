@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+</body>
+<script>
+    class Tamagotchi{
+        constructor(nombre){
+            this.nombre = nombre;
+            this.hambre = 10;
+        }
+        comer(){
+            this.hambre -= 2;
+        }
+    }
+    var tamagotchi1 = new Tamagotchi("Mametchi");
+    tamagotchi1.comer();
+    console.log("Tamagotchi: " + tamagotchi1.nombre + " - Hambre: " + tamagotchi1.hambre);
+</script>
+</html>

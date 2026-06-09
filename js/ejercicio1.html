@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+</body>
+<script>
+    class Jugador{
+        constructor(nombre){
+            this.nombre = nombre;
+            this.vidas = 3;
+        }
+        oneup(){
+            this.vidas += 1;
+        }
+        hit(){
+            this.vidas -= 1;
+        }
+        mushroom(){
+            this.vidas += 2;
+        }
+        tinymushroom(){
+            this.vidas = 1;
+        }
+        poisonmushroom(){
+            this.vidas = 0;
+        }
+        reset(){
+            this.vidas = 3;
+        }
+    }
+    var jugador1 = new Jugador("Mario");
+    var jugador2 = new Jugador("Luigi");
+    console.log("Jugador 1: " + jugador1.nombre + " - Vidas: " + jugador1.vidas);
+    console.log("Jugador 2: " + jugador2.nombre + " - Vidas: " + jugador2.vidas);
+</script>
+</html>
