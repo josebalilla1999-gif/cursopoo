@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class RangeException extends RangeError{
+        constructor(message){
+            super(message);
+            this.name = "RangeException";
+        }
+    }
+    class ValidadorSensor{
+        static analizarTemperatura(grados){
+            if(grados < -50 || grados > 100){
+                throw new RangeException("La temperatura está fuera del rango permitido.");
+            }
+            console.log("Temperatura válida: " + grados + "°C");
+        }
+    }
+    try{
+        ValidadorSensor.analizarTemperatura(25);
+        ValidadorSensor.analizarTemperatura(-60);
+    }catch(e){
+        if(e instanceof RangeException){
+            console.error("Error: " + e.message);
+        }else{
+            throw e;
+        }
+    }
+</script>
+</html>
