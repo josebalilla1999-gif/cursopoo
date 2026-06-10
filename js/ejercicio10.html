@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class MiembroComunidad{
+        _nombre;
+        _email;
+        mostrarPerfil(){
+            console.log("Nombre: " + this._nombre);
+            console.log("Email: " + this._email);
+        }
+    }
+    class Profesor extends MiembroComunidad{
+        #departamento;
+        constructor(nombre, email, departamento){   
+            super();
+            this._nombre = nombre;
+            this._email = email;
+            this.#departamento = departamento;
+        }
+        mostrarPerfil(){
+            super.mostrarPerfil();
+            console.log("Departamento: " + this.#departamento);
+        }
+    }
+</script>
+</html>
