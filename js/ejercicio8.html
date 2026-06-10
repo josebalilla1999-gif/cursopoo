@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <p id="articulo1"></p>
+    <p id="articulo2"></p>
+</body>
+<script>
+    class Articulo{
+        #titulo;
+        #existencias;
+        constructor(titulo, existencias){
+            this.#titulo = titulo;
+            this.#existencias = existencias;
+        }
+        get titulo(){
+            return this.#titulo;
+        }
+        get existencias(){
+            return this.#existencias;
+        }
+        reponer(cantidad){
+            this.#existencias += cantidad;
+        }
+    }
+    const articulo1 = new Articulo("ART-100", 0);
+    const articulo2 = new Articulo("ART-200", 0);
+    articulo2.reponer(12);
+    document.getElementById("articulo1").textContent = "Artículo: " + articulo1.titulo + ", Existencias: " + articulo1.existencias;
+    document.getElementById("articulo2").textContent = "Artículo: " + articulo2.titulo + ", Existencias: " + articulo2.existencias;
+</script>
+</html>

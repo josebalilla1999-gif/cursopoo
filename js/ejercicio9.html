@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class CuentaCorriente{
+        #saldo;
+        constructor(){
+            this.#saldo = 0.0;
+        }
+        ingresar(cantidad){
+            if(cantidad <= 0){
+                console.log("La cantidad a ingresar debe ser mayor que cero.");
+                return false;
+            }else{
+                this.#saldo += cantidad;
+                return true;
+            }
+        }
+        retirar(cantidad){
+            if(cantidad <= 0){
+                console.log("La cantidad a retirar debe ser mayor que cero.");
+                return false;
+            }else if(cantidad > this.#saldo){
+                console.log("No tienes suficiente saldo para retirar " + cantidad + " euros. Saldo actual: " + this.#saldo + " euros.");
+                return false;
+            }else{
+                this.#saldo -= cantidad;
+                console.log("Has retirado " + cantidad + " euros. Saldo actual: " + this.#saldo + " euros.");
+                return true;
+            }
+        }
+    }
+</script>
+</html>
