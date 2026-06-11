@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Tarea{
+        #titulo = "";
+        completada = false;
+    }
+    class GestorTareas extends Tarea{
+        #lista = [];
+        agregarTarea(tarea){
+            this.#lista.push(tarea);
+        }
+        listarPendientes(){
+            this.#lista.forEach((tarea, i) => {
+                if(!tarea.completada){
+                    console.log('Tarea ' + (i + 1) + ': Pendiente');
+                }
+            });
+        }
+    }
+</script>
+</html>
